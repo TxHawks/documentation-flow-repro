@@ -1,23 +1,23 @@
 /* @flow */
 
 ///////////////
-//  Objects  //
+//  TypeObjects  //
 ///////////////
 /**
- * An object with nothing but a description of the
+ * A type with nothing but a description of the
  * object itself in the docblock
  *
  * **Expected:** Documentation should include object
  * property types.<br />
  * **result:** Documentation includes object property types.
  */
-type ObjDescriptionOnly = {
+type TypeObjDescriptionOnly = {
   one: string,
   two: number,
 }
 
 /**
- * An object with a description of the object itself
+ * A type with a description of the object itself
  * and of its props, but with no type information in
  * the docblock.
  *
@@ -29,13 +29,13 @@ type ObjDescriptionOnly = {
  * @property one - The first prop
  * @property two - The second prop
  */
-type ObjPropsDescriptionNoType = {
+type TypeObjPropsDescriptionNoType = {
   one: string,
   two: number,
 }
 
 /**
- * An object with a description of the object itself
+ * A type with a description of the object itself
  * and of its props, with type information in
  * the docblock
  *
@@ -48,9 +48,46 @@ type ObjPropsDescriptionNoType = {
  * @property {string} one - The first prop
  * @property {number} two - The second prop
  */
-type ObjPropsDescriptionWithType = {
+type TypeObjPropsDescriptionWithType = {
   one: string,
   two: number,
+}
+
+/**
+ * A type with a description of the object itself in the main docblock
+ * and of its props, with prop descriptions inlined inside the type
+ *
+ * **Expected:** Documentation should include object
+ * property types and descriptions.<br />
+ * **result:** A separate documentation item is produced for each property.
+ */
+type TypeObjPropsInlineDescription = {
+  /** The first prop of TypeObjPropsInlineDescription */
+  one: string,
+  /** The second prop of TypeObjPropsInlineDescription */
+  two: number,
+}
+
+/**
+ * An interface with a description of the object itself in the main docblock
+ * and of its props, with prop descriptions inlined inside the type
+ * explicitly using `@memberof`
+ *
+ * **Expected:** Documentation should include object
+ * property types and descriptions.<br />
+ * **result:** A separate documentation item is produced for each property.
+ */
+interface InterfacePropsInlineDescriptionMemberOf {
+  /**
+   * @memberof InterfacePropsInlineDescriptionMemberOf
+   * The first prop of InterfacePropsInlineDescriptionMemberOf
+   */
+  first: string;
+  /**
+   * @memberof InterfacePropsInlineDescriptionMemberOf
+   * The second prop of InterfacePropsInlineDescriptionMemberOf
+   */
+  second: number;
 }
 
 /////////////////

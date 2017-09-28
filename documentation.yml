@@ -1,11 +1,16 @@
 toc:
   - name: Object Properties
-  - ObjDescriptionOnly
-  - ObjPropsDescriptionNoType
-  - ObjPropsDescriptionWithType
+  - TypeObjDescriptionOnly
+  - TypeObjPropsDescriptionNoType
+  - TypeObjPropsDescriptionWithType
+  - TypeObjPropsInlineDescription
+  - InterfacePropsInlineDescriptionMemberOf
 
   - name: Functions
   - funcDescriptionOnly
   - funcParamsDescriptionNoType
   - funcParamsDescriptionWithType
+
+  - name: Erroneously Generated
+    description: These are generated as separate documentation items when descriptions of the properties are inlined inside the object
 

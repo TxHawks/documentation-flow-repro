@@ -35,9 +35,9 @@
               
                 
                 <li><a
-                  href='#objdescriptiononly'
+                  href='#typeobjdescriptiononly'
                   class="">
-                  ObjDescriptionOnly
+                  TypeObjDescriptionOnly
                   
                 </a>
                 
@@ -45,9 +45,9 @@
               
                 
                 <li><a
-                  href='#objpropsdescriptionnotype'
+                  href='#typeobjpropsdescriptionnotype'
                   class="">
-                  ObjPropsDescriptionNoType
+                  TypeObjPropsDescriptionNoType
                   
                 </a>
                 
@@ -55,9 +55,29 @@
               
                 
                 <li><a
-                  href='#objpropsdescriptionwithtype'
+                  href='#typeobjpropsdescriptionwithtype'
                   class="">
-                  ObjPropsDescriptionWithType
+                  TypeObjPropsDescriptionWithType
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#typeobjpropsinlinedescription'
+                  class="">
+                  TypeObjPropsInlineDescription
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#interfacepropsinlinedescriptionmemberof'
+                  class="">
+                  InterfacePropsInlineDescriptionMemberOf
                   
                 </a>
                 
@@ -103,6 +123,56 @@
                 
                 </li>
               
+                
+                <li><a
+                  href='#erroneously-generated'
+                  class="h5 bold black caps">
+                  Erroneously Generated
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#one'
+                  class="">
+                  one
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#two'
+                  class="">
+                  two
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#first'
+                  class="">
+                  first
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#second'
+                  class="">
+                  second
+                  
+                </a>
+                
+                </li>
+              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -133,22 +203,22 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='objdescriptiononly'>
-      ObjDescriptionOnly
+    <h3 class='fl m0' id='typeobjdescriptiononly'>
+      TypeObjDescriptionOnly
     </h3>
     
     
   </div>
   
 
-  <p>An object with nothing but a description of the
+  <p>A type with nothing but a description of the
 object itself in the docblock</p>
 <p><strong>Expected:</strong> Documentation should include object
 property types.<br />
 <strong>result:</strong> Documentation includes object property types.</p>
 
 
-  <div class='pre p1 fill-light mt0'>ObjDescriptionOnly</div>
+  <div class='pre p1 fill-light mt0'>TypeObjDescriptionOnly</div>
   
     <p>
       Type:
@@ -206,15 +276,15 @@ property types.<br />
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='objpropsdescriptionnotype'>
-      ObjPropsDescriptionNoType
+    <h3 class='fl m0' id='typeobjpropsdescriptionnotype'>
+      TypeObjPropsDescriptionNoType
     </h3>
     
     
   </div>
   
 
-  <p>An object with a description of the object itself
+  <p>A type with a description of the object itself
 and of its props, but with no type information in
 the docblock.</p>
 <p><strong>Expected:</strong> Documentation should include object
@@ -223,7 +293,7 @@ property types and descriptions.<br />
 types but ignores the descriptions.</p>
 
 
-  <div class='pre p1 fill-light mt0'>ObjPropsDescriptionNoType</div>
+  <div class='pre p1 fill-light mt0'>TypeObjPropsDescriptionNoType</div>
   
     <p>
       Type:
@@ -281,15 +351,15 @@ types but ignores the descriptions.</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='objpropsdescriptionwithtype'>
-      ObjPropsDescriptionWithType
+    <h3 class='fl m0' id='typeobjpropsdescriptionwithtype'>
+      TypeObjPropsDescriptionWithType
     </h3>
     
     
   </div>
   
 
-  <p>An object with a description of the object itself
+  <p>A type with a description of the object itself
 and of its props, with type information in
 the docblock</p>
 <p><strong>Expected:</strong> Documentation should include object
@@ -299,7 +369,7 @@ twice. Once only with type information and once with
 type information and description.</p>
 
 
-  <div class='pre p1 fill-light mt0'>ObjPropsDescriptionWithType</div>
+  <div class='pre p1 fill-light mt0'>TypeObjPropsDescriptionWithType</div>
   
     <p>
       Type:
@@ -343,6 +413,148 @@ type information and description.</p>
       
         <div class='space-bottom0'>
           <span class='code bold'>two</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='typeobjpropsinlinedescription'>
+      TypeObjPropsInlineDescription
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>A type with a description of the object itself in the main docblock
+and of its props, with prop descriptions inlined inside the type</p>
+<p><strong>Expected:</strong> Documentation should include object
+property types and descriptions.<br />
+<strong>result:</strong> A separate documentation item is produced for each property.</p>
+
+
+  <div class='pre p1 fill-light mt0'>TypeObjPropsInlineDescription</div>
+  
+    <p>
+      Type:
+      {one: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, two: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>}
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>one</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>two</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+          
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='interfacepropsinlinedescriptionmemberof'>
+      InterfacePropsInlineDescriptionMemberOf
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>An interface with a description of the object itself in the main docblock
+and of its props, with prop descriptions inlined inside the type
+explicitly using <code>@memberof</code></p>
+<p><strong>Expected:</strong> Documentation should include object
+property types and descriptions.<br />
+<strong>result:</strong> A separate documentation item is produced for each property.</p>
+
+
+  <div class='pre p1 fill-light mt0'>InterfacePropsInlineDescriptionMemberOf</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Properties</div>
+    <div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>first</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+          
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <span class='code bold'>second</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
           
           
         </div>
@@ -603,6 +815,207 @@ in the docblock</p>
 
       
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <div class='keyline-top-not py2'><section class='py2 clearfix'>
+
+  <h2 id='erroneously-generated' class='mt0'>
+    Erroneously Generated
+  </h2>
+
+  
+    <p>These are generated as separate documentation items when descriptions of the properties are inlined inside the object</p>
+
+  
+</section>
+</div>
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='one'>
+      one
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The first prop of TypeObjPropsInlineDescription</p>
+
+
+  <div class='pre p1 fill-light mt0'>one</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='two'>
+      two
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>The second prop of TypeObjPropsInlineDescription</p>
+
+
+  <div class='pre p1 fill-light mt0'>two</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='first'>
+      first
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>first</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='second'>
+      second
+    </h3>
+    
+    
+  </div>
+  
+
+  
+
+  <div class='pre p1 fill-light mt0'>second</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
   
 
   
